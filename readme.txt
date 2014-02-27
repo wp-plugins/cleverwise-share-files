@@ -4,7 +4,7 @@ Donate link: http://www.cyberws.com/cleverwise-plugins/
 Tags: downloads, download, download management, download system, files, file, file management, file system
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,6 +57,9 @@ No, there is none.  Why not? This system was originally designed for a site that
 
 == Changelog ==
 
+= 1.3 =
+Fixed anti-bot word/phrase bug causing errors
+
 = 1.2 =
 Altered framework code to fit Wordpress Plugin Directory terms
 
@@ -69,5 +72,5 @@ Initial release of plugin
 
 == Upgrade Notice ==
 
-= 1.2 =
-Altered framework code to fit Wordpress Plugin Directory terms
+= 1.3 =
+Fixed anti-bot word/phrase bug causing errors

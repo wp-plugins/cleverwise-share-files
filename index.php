@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Cleverwise Share Files
 * Description: Advanced file download system that allows multiple sections, categories, and download pages.  Also included is advanced access control and anti-bot technology.
-* Version: 1.2
+* Version: 1.3
 * Author: Jeremy O'Connell
 * Author URI: http://www.cyberws.com/cleverwise-plugins/
 * License: GPL2 .:. http://opensource.org/licenses/GPL-2.0
@@ -19,7 +19,7 @@ $cwfa_fs=new cwfa_fs;
 ////////////////////////////////////////////////////////////////////////////
 Global $wpdb,$fs_wp_option_version_txt,$fs_wp_option,$fs_wp_option_version_num;
 
-$fs_wp_option_version_num='1.2';
+$fs_wp_option_version_num='1.3';
 $fs_wp_option='share_files';
 $fs_wp_option_version_txt=$fs_wp_option.'_version';
 
@@ -67,9 +67,6 @@ if (isset($_REQUEST['cw_action'])) {
 //	File Download Code
 ////////////////////////////////////////////////////////////////////////////
 $file_id='0';
-if (!isset($cwf_wp_option_version_num)) {
-	unset($_REQUEST['file_id']);
-}
 if (isset($_REQUEST['file_id'])) {
 	$file_id=$cwfa_fs->cwf_san_int($_REQUEST['file_id']);
 	if (!$file_id) {
