@@ -4,7 +4,7 @@ Donate link: http://www.cyberws.com/cleverwise-plugins/
 Tags: downloads, download, download management, download system, files, file, file management, file system
 Requires at least: 3.0.1
 Tested up to: 3.8.1
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,11 +22,13 @@ Advanced file download system that allows multiple sections, categories, and dow
 
 <p>There are many other advanced features too like anti-bot technology to help prevent bots from downloading your files.  Oh and this anti-bot technology will be unique to your site and not something that is cookie cutter.  This will make it harder for bots to lock on because no two installations of this plugin will be exactly the same.  Also editor level accounts have the ability to manage the system.  I know what you are thinking can I block editors?  Absolutely!  You may block all editors or even better only allow specific editors!</p>
 
-<p>Finally there are other features in the admin panel such as download counts and the ability to search through your files including limiting by categoriy and section.  Yup all this download management goodness in your familiar, comfortable, trusty Wordpress interface.</p>
+<p>Finally there are other features in the admin panel such as download counts and the ability to search through your files including limiting by category and/or section.  Yup all this download management goodness in your familiar, comfortable, and trusty Wordpress panel.</p>
 
 <p>Language Support: While this plugin supports any language being used for section names, category names, download names, download descriptions, etc English is used in key areas.  It is planned to eventually move these words into a language file/area but for now its English only, sorry.</p>
 
-<p>Live Site Preview: Want to see this plugin in action on a real live site? ArmadaFleetCommand.com has multiple sections and one is at http://www.armadafleetcommand.com/get-files?ssid=4</p>
+<p>Live Site Preview: Want to see this plugin in action on a real live site? ArmadaFleetCommand.com has multiple sections and one is at <a href="http://www.armadafleetcommand.com/get-files?ssid=4">http://www.armadafleetcommand.com/get-files?ssid=4</a></p>
+
+<p>Shameless Promotion: See other <a href="http://wordpress.org/plugins/search.php?q=cleverwise">Cleverwise Wordpress Directory Plugins</a></p>
 
 == Installation ==
 
@@ -57,8 +59,11 @@ No, there is none.  Why not? This system was originally designed for a site that
 
 == Changelog ==
 
+= 1.4 =
+UI changes
+
 = 1.3 =
-Fixed anti-bot word/phrase bug causing errors
+Fixed: Anti-bot word/phrase bug causing errors
 
 = 1.2 =
 Altered framework code to fit Wordpress Plugin Directory terms
@@ -72,5 +77,5 @@ Initial release of plugin
 
 == Upgrade Notice ==
 
-= 1.3 =
-Fixed anti-bot word/phrase bug causing errors
+= 1.4 =
+UI changes

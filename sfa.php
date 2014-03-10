@@ -1260,6 +1260,14 @@ EOM;
 
 $cw_share_files_html .=<<<EOM
 <p>The following lists the new changes from version-to-version.</p>
+<p>Version: <b>1.4</b></p>
+<ul style="list-style: disc; margin-left: 25px;">
+<li>UI changes</li>
+</ul>
+<p>Version: <b>1.3</b></p>
+<ul style="list-style: disc; margin-left: 25px;">
+<li>Fixed: Anti-bot word/phrase bug causing errors</li>
+</ul>
 <p>Version: <b>1.2</b></p>
 <ul style="list-style: disc; margin-left: 25px;">
 <li>Altered framework code to fit Wordpress Plugin Directory terms</li>
@@ -1314,7 +1322,7 @@ $cw_share_files_html .=<<<EOM
 EOM;
 	if ($settings_lock_down == 'n') {
 $cw_share_files_html .=<<<EOM
-<div style="margin-top: 30px; border-top: 1px solid #d6d6cf; padding-top: 5px; width: 400px;">Admin Functions: <a href="?page=cw-share-files&cw_action=settings">Settings</a> | <a href="?page=cw-share-files&cw_action=settingshelp">Help Guide</a> | <a href="?page=cw-share-files&cw_action=settingsnew">What Is New?</a> | <a href="?page=cw-share-files&cw_action=settingsfuture">Future Ideas</a></p>
+<div style="margin-top: 30px; border-top: 1px dotted #d6d6cf; padding-top: 5px; width: 400px;">Admin Functions:<br><a href="?page=cw-share-files&cw_action=settings">Settings</a> | <a href="?page=cw-share-files&cw_action=settingshelp">Help Guide</a> | <a href="?page=cw-share-files&cw_action=settingsnew">What Is New?</a> | <a href="?page=cw-share-files&cw_action=settingsfuture">Future Ideas</a></p>
 EOM;
 	}
 	}
@@ -1330,15 +1338,25 @@ EOM;
 ////////////////////////////////////////////////////////////////////////////
 function cw_share_files_admin_browser($cw_share_files_html,$cw_share_files_action) {
 print <<<EOM
-<div style="margin: 20px 20px 20px 0px;">
-<h2 style="padding: 0px; margin: 0px;">Share Files Management</h2>
+<style type="text/css">
+#cws-wrap {margin: 20px 20px 20px 0px;}
+#cws-wrap a {text-decoration: none; color: #3991bb;}
+#cws-wrap a:hover {text-decoration: underline; color: #ce570f;}
+#cws-nav {width: 400px; padding: 0px; margin-top: 10px; background-color: #deeaef; -moz-border-radius: 5px; border-radius: 5px;}
+#cws-resources {width: 400px; padding: 0px; margin: 40px 0px 20px 0px; background-color: #c6d6ad; -moz-border-radius: 5px; border-radius: 5px; font-size: 12px; color: #000000;}
+#cws-resources a {text-decoration: none; color: #28394d;}
+#cws-resources a:hover {text-decoration: none; background-color: #28394d; color: #ffffff;}
+#cws-inner {padding: 5px;}
+</style>
+<div id="cws-wrap" name="cws-wrap">
+<h2 style="padding: 0px; margin: 0px;">Cleverwise Share Files Management</h2>
 <div style="margin-top: 7px; width: 90%; font-size: 10px; line-height: 1;">This system does NOT alter actual download files thus no uploading, altering, or deleting of files occurs.  It manages the download links in an organized fashion.  In addition when you update an actual file on your site you should edit the file record to allow this system to update the MD5 value, file size, and file modified date information.</div>
-<p>Navigation: <a href="?page=cw-share-files">Main Panel</a> | <a href="?page=cw-share-files&cw_action=files">File Management</a> | <a href="?page=cw-share-files&cw_action=cats">Category Management</a></p>
-<p style="width: 400px; border: 1px solid #ab5c23; padding: 5px; font-size: 14px;">Action: <span style="color: #ab5c23;">$cw_share_files_action</span></p>
+<div id="cws-nav" name="cws-nav"><div id="cws-inner" name="cws-inner"><a href="?page=cw-share-files">Main Panel</a> | <a href="?page=cw-share-files&cw_action=files">File Management</a> | <a href="?page=cw-share-files&cw_action=cats">Category Management</a></div></div>
+<p style="font-size: 13px; font-weight: bold;">Current: <span style="color: #ab5c23;">$cw_share_files_action</span></p>
 <p>$cw_share_files_html</p>
-<div style="width: 400px; margin-top: 40px; border-top: 1px dashed #000000; font-size: 12px; face-family: tahoma;"><i>Open in new windows:</i><br>
+<div id="cws-resources" name="cws-resources"><div id="cws-inner" name="cws-inner">Resources (open in new windows):<br>
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7VJ774KB9L9Z4" target="_blank">Donate - Thank You!</a> | <a href="http://wordpress.org/support/plugin/cleverwise-redirect-it" target="_blank">Get Support</a> | <a href="http://wordpress.org/support/view/plugin-reviews/cleverwise-redirect-it" target="_blank">Review Plugin</a> | <a href="http://www.cyberws.com/cleverwise-plugins/plugin-suggestion/" target="_blank">Suggest Plugin</a><br>
-<a href="http://www.cyberws.com/cleverwise-plugins" target="_blank">Cleverwise Plugins</a> | <a href="http://www.cyberws.com/professional-technical-consulting/" target="_blank">Wordpress +PHP,Server Consulting</a></div>
+<a href="http://www.cyberws.com/cleverwise-plugins" target="_blank">Cleverwise Plugins</a> | <a href="http://www.cyberws.com/professional-technical-consulting/" target="_blank">Wordpress +PHP,Server Consulting</a></div></div>
 </div>
 EOM;
 }
