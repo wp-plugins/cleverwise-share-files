@@ -358,14 +358,14 @@ EOM;
 		} else {
 			$dl_section_ids='';
 		}
-		$dl_title=$_REQUEST['dl_title'];
+		$dl_title=trim($_REQUEST['dl_title']);
 		$dl_status=$cwfa_fs->cwf_san_an($_REQUEST['dl_status']);
 		$dl_url=$cwfa_fs->cwf_san_url($_REQUEST['dl_url']);
 		$dl_desc=trim($_REQUEST['dl_desc']);
 		$dl_auth_name=trim($_REQUEST['dl_auth_name']);
 		$dl_auth_url=trim($_REQUEST['dl_auth_url']);
 		$dl_auth_email=trim($_REQUEST['dl_auth_email']);
-		$dl_misc=$_REQUEST['dl_misc'];
+		$dl_misc=trim($_REQUEST['dl_misc']);
 
 		if (!$dl_title) {
 			$error .='<li>No file title provided</li>';
@@ -1260,6 +1260,10 @@ EOM;
 
 $cw_share_files_html .=<<<EOM
 <p>The following lists the new changes from version-to-version.</p>
+<p>Version: <b>1.5</b></p>
+<ul style="list-style: disc; margin-left: 25px;">
+<li>Fixed: Support and rating links</li>
+</ul>
 <p>Version: <b>1.4</b></p>
 <ul style="list-style: disc; margin-left: 25px;">
 <li>UI changes</li>
@@ -1337,6 +1341,7 @@ EOM;
 //	Print out to browser (wp)
 ////////////////////////////////////////////////////////////////////////////
 function cw_share_files_admin_browser($cw_share_files_html,$cw_share_files_action) {
+$cw_plugin_name='cleverwise-share-files';
 print <<<EOM
 <style type="text/css">
 #cws-wrap {margin: 20px 20px 20px 0px;}
@@ -1355,7 +1360,7 @@ print <<<EOM
 <p style="font-size: 13px; font-weight: bold;">Current: <span style="color: #ab5c23;">$cw_share_files_action</span></p>
 <p>$cw_share_files_html</p>
 <div id="cws-resources" name="cws-resources"><div id="cws-inner" name="cws-inner">Resources (open in new windows):<br>
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7VJ774KB9L9Z4" target="_blank">Donate - Thank You!</a> | <a href="http://wordpress.org/support/plugin/cleverwise-redirect-it" target="_blank">Get Support</a> | <a href="http://wordpress.org/support/view/plugin-reviews/cleverwise-redirect-it" target="_blank">Review Plugin</a> | <a href="http://www.cyberws.com/cleverwise-plugins/plugin-suggestion/" target="_blank">Suggest Plugin</a><br>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7VJ774KB9L9Z4" target="_blank">Donate - Thank You!</a> | <a href="http://wordpress.org/support/plugin/$cw_plugin_name" target="_blank">Get Support</a> | <a href="http://wordpress.org/support/view/plugin-reviews/$cw_plugin_name" target="_blank">Review Plugin</a> | <a href="http://www.cyberws.com/cleverwise-plugins/plugin-suggestion/" target="_blank">Suggest Plugin</a><br>
 <a href="http://www.cyberws.com/cleverwise-plugins" target="_blank">Cleverwise Plugins</a> | <a href="http://www.cyberws.com/professional-technical-consulting/" target="_blank">Wordpress +PHP,Server Consulting</a></div></div>
 </div>
 EOM;

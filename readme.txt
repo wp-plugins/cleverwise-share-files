@@ -3,8 +3,8 @@ Contributors: cyberws
 Donate link: http://www.cyberws.com/cleverwise-plugins/
 Tags: downloads, download, download management, download system, files, file, file management, file system
 Requires at least: 3.0.1
-Tested up to: 3.9
-Stable tag: 1.4
+Tested up to: 3.9.1
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,11 +53,18 @@ This plugin doesn't limit the numbers of files.  The only limitations are that o
 
 No, there is none.  Why not? This system was originally designed for a site that has many files of at least 15MB and several over 200MB.  Since web browser uploading does NOT handle large files (100MB+) very efficiently it was decided to skip the inclusion of one and instead rely on FTP or sFTP.
 
+= How can I handle file uploading? =
+
+One method is to use Wordpress' built in media management system to upload the actual files.  Do keep in mind PHP has a file upload size limit that many web hosts have set to 10MB or less.  Another idea is using the aforementioned FTP/sFTP.  Most hosting plans allow for multiple FTP accounts and the ability to specify which directory/folder an account is able to access.  This way if you had say three trusted users you could create three different FTP accounts which would only allow them to upload to their specific area of your website.
+
 == Screenshots ==
 
 1. screenshot-1.jpg
 
 == Changelog ==
+
+= 1.5 =
+Fixed: Support and rating links
 
 = 1.4 =
 UI changes
@@ -77,5 +84,5 @@ Initial release of plugin
 
 == Upgrade Notice ==
 
-= 1.4 =
-UI changes
+= 1.5 =
+Fixed: Support and rating links; my apologies for the errors.
