@@ -4,7 +4,7 @@ Donate link: http://www.cyberws.com/cleverwise-plugins/
 Tags: downloads, download, download management, download system, files, file, file management, file system
 Requires at least: 3.0.1
 Tested up to: 3.9.1
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,6 +63,9 @@ One method is to use Wordpress' built in media management system to upload the a
 
 == Changelog ==
 
+= 1.6 =
+Fixed: Shortcode in certain areas would cause incorrect placement.
+
 = 1.5 =
 Fixed: Support and rating links
 
@@ -84,5 +87,5 @@ Initial release of plugin
 
 == Upgrade Notice ==
 
-= 1.5 =
-Fixed: Support and rating links; my apologies for the errors.
+= 1.6 =
+Plugin should no longer display at top of page when shortcode is located elsewhere.

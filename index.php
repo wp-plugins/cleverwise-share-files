@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Cleverwise Share Files
 * Description: Advanced file download system that allows multiple sections, categories, and download pages.  Also included is advanced access control and anti-bot technology.
-* Version: 1.5
+* Version: 1.6
 * Author: Jeremy O'Connell
 * Author URI: http://www.cyberws.com/cleverwise-plugins/
 * License: GPL2 .:. http://opensource.org/licenses/GPL-2.0
@@ -19,7 +19,7 @@ $cwfa_fs=new cwfa_fs;
 ////////////////////////////////////////////////////////////////////////////
 Global $wpdb,$fs_wp_option_version_txt,$fs_wp_option,$fs_wp_option_version_num;
 
-$fs_wp_option_version_num='1.5';
+$fs_wp_option_version_num='1.6';
 $fs_wp_option='share_files';
 $fs_wp_option_version_txt=$fs_wp_option.'_version';
 
@@ -634,6 +634,9 @@ EOM;
 	////////////////////////////////////////////////////////////////////////////
 	//	Load not found message
 	////////////////////////////////////////////////////////////////////////////
+	if (!$cw_share_files_title) {
+		$cw_share_files_title='Oops!';
+	}
 	if ($cw_fs_no_fnd_msg_status == 'y') {
 		$cw_share_files_html=$cw_fs_no_fnd_msg;
 	}
@@ -641,20 +644,11 @@ EOM;
 	////////////////////////////////////////////////////////////////////////////
 	//	Call out to browser
 	////////////////////////////////////////////////////////////////////////////
-	cw_share_files_visitor_browser($cw_share_files_html,$cw_share_files_title);
-}
-
-////////////////////////////////////////////////////////////////////////////
-//	Print out to browser (wp)
-////////////////////////////////////////////////////////////////////////////
-function cw_share_files_visitor_browser($cw_share_files_html,$cw_share_files_title) {
-
-	if (!$cw_share_files_title) {
-		$cw_share_files_title='Oops!';
-	}
-print <<<EOM
+$cw_share_files_page .=<<<EOM
 <h4>$cw_share_files_title</h4>
 <div style="height: 10px; font-size: 10px;">&nbsp;</div>
 $cw_share_files_html
 EOM;
+	return($cw_share_files_page);
 }
+

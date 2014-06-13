@@ -52,7 +52,7 @@ Global $current_user,$fs_wp_option;
 	}
 
 	if ($share_files_mng_disp == 'y') {
-		add_menu_page('Share Files','Share Files','publish_pages','cw-share-files','cw_share_files_aside','','30');
+		add_menu_page('Share Files','Share Files','publish_pages','cw-share-files','cw_share_files_aside','','32');
 	}
 }
 
@@ -1260,6 +1260,10 @@ EOM;
 
 $cw_share_files_html .=<<<EOM
 <p>The following lists the new changes from version-to-version.</p>
+<p>Version: <b>1.6</b></p>
+<ul style="list-style: disc; margin-left: 25px;">
+<li>Fixed: Shortcode in certain areas would cause incorrect placement.</li>
+</ul>
 <p>Version: <b>1.5</b></p>
 <ul style="list-style: disc; margin-left: 25px;">
 <li>Fixed: Support and rating links</li>
