@@ -66,7 +66,7 @@ One method is to use Wordpress' built in media management system to upload the a
 == Changelog ==
 
 = 1.7 =
-Fixed: Editor permission bugt
+Fixed: Editor permission bug
 
 = 1.6 =
 Fixed: Shortcode in certain areas would cause incorrect placement
