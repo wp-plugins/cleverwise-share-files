@@ -27,7 +27,7 @@ Global $current_user,$fs_wp_option;
 		////////////////////////////////////////////////////////////////////////////
 		//	For wp admins always verify as they have setting access
 		////////////////////////////////////////////////////////////////////////////
-		if (wp_get_current_user('manage_options')) {
+		if (current_user_can('manage_options')) {
 			$share_files_mng_disp='y';
 		//	Check non wp admins
 		} else {
@@ -96,7 +96,7 @@ Global $wpdb,$current_user,$fs_wp_option,$cw_share_files_cats_tbl,$cw_share_file
 	//	Don't allow no admin access to admin functions
 	////////////////////////////////////////////////////////////////////////////
 	$settings_lock_down='y';
-	if (wp_get_current_user('manage_options')) {
+	if (current_user_can('update_plugins') == '1') {
 		$settings_lock_down='n';
 	} else {
 		if (substr_count($cw_action,'setting') > '0') {
@@ -1260,9 +1260,13 @@ EOM;
 
 $cw_share_files_html .=<<<EOM
 <p>The following lists the new changes from version-to-version.</p>
+<p>Version: <b>1.7</b></p>
+<ul style="list-style: disc; margin-left: 25px;">
+<li>Fixed: Editor permission bug</li>
+</ul>
 <p>Version: <b>1.6</b></p>
 <ul style="list-style: disc; margin-left: 25px;">
-<li>Fixed: Shortcode in certain areas would cause incorrect placement.</li>
+<li>Fixed: Shortcode in certain areas would cause incorrect placement</li>
 </ul>
 <p>Version: <b>1.5</b></p>
 <ul style="list-style: disc; margin-left: 25px;">
@@ -1423,4 +1427,5 @@ EOM;
 		add_option($fs_wp_option_version_txt,$fs_wp_option_version_num);
 	}
 }
+
 

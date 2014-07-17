@@ -4,7 +4,7 @@ Donate link: http://www.cyberws.com/cleverwise-plugins/
 Tags: downloads, download, download management, download system, files, file, file management, file system
 Requires at least: 3.0.1
 Tested up to: 3.9.1
-Stable tag: 1.6
+Stable tag: 1.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,8 @@ Advanced file download system that allows multiple sections, categories, and dow
 <p>Live Site Preview: Want to see this plugin in action on a real live site? ArmadaFleetCommand.com has multiple sections and one is at <a href="http://www.armadafleetcommand.com/get-files?ssid=4">http://www.armadafleetcommand.com/get-files?ssid=4</a></p>
 
 <p>Shameless Promotion: See other <a href="http://wordpress.org/plugins/search.php?q=cleverwise">Cleverwise Wordpress Directory Plugins</a></p>
+
+<p>Thanks for looking at the Cleverwise Plugin Series! To help out the community reviews and comments are highly encouraged.  If you can't leave a good review I would greatly appreciate opening a support thread before hand to see if I can address your concern(s).  Enjoy!</p>
 
 == Installation ==
 
@@ -63,8 +65,11 @@ One method is to use Wordpress' built in media management system to upload the a
 
 == Changelog ==
 
+= 1.7 =
+Fixed: Editor permission bugt
+
 = 1.6 =
-Fixed: Shortcode in certain areas would cause incorrect placement.
+Fixed: Shortcode in certain areas would cause incorrect placement
 
 = 1.5 =
 Fixed: Support and rating links
@@ -87,5 +92,5 @@ Initial release of plugin
 
 == Upgrade Notice ==
 
-= 1.6 =
-Plugin should no longer display at top of page when shortcode is located elsewhere.
+= 1.7 =
+Fixed editor permission bug
