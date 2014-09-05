@@ -3,8 +3,8 @@ Contributors: cyberws
 Donate link: http://www.cyberws.com/cleverwise-plugins/
 Tags: downloads, download, download management, download system, files, file, file management, file system
 Requires at least: 3.0.1
-Tested up to: 3.9.1
-Stable tag: 1.7
+Tested up to: 4.0
+Stable tag: 1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,9 @@ One method is to use Wordpress' built in media management system to upload the a
 
 == Changelog ==
 
+= 1.8 =
+Background edits to eliminate some PHP notice messages
+
 = 1.7 =
 Fixed: Editor permission bug
 
@@ -92,5 +95,5 @@ Initial release of plugin
 
 == Upgrade Notice ==
 
-= 1.7 =
-Fixed editor permission bug
+= 1.8 =
+Background code edits to reduce notice messages in server logs.

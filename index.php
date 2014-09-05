@@ -2,7 +2,7 @@
 /**
 * Plugin Name: Cleverwise Share Files
 * Description: Advanced file download system that allows multiple sections, categories, and download pages.  Also included is advanced access control and anti-bot technology.
-* Version: 1.7
+* Version: 1.8
 * Author: Jeremy O'Connell
 * Author URI: http://www.cyberws.com/cleverwise-plugins/
 * License: GPL2 .:. http://opensource.org/licenses/GPL-2.0
@@ -19,7 +19,7 @@ $cwfa_fs=new cwfa_fs;
 ////////////////////////////////////////////////////////////////////////////
 Global $wpdb,$fs_wp_option_version_txt,$fs_wp_option,$fs_wp_option_version_num;
 
-$fs_wp_option_version_num='1.7';
+$fs_wp_option_version_num='1.8';
 $fs_wp_option='share_files';
 $fs_wp_option_version_txt=$fs_wp_option.'_version';
 
@@ -158,6 +158,9 @@ Global $wpdb,$fs_wp_option,$cw_share_files_cats_tbl,$cw_share_files_dls_tbl,$cw_
 	$settings_sections=$fs_wp_option_array['settings_sections'];
 
 	$settings_sections=explode("\n",$settings_sections);
+	
+	$cw_share_files_title='';
+	$cw_share_files_html='';
 
 	$fs_wp_option_section_cats=$fs_wp_option.'_section_cats';
 	$fs_wp_option_section_cats=get_option($fs_wp_option_section_cats);
@@ -194,7 +197,7 @@ Global $wpdb,$fs_wp_option,$cw_share_files_cats_tbl,$cw_share_files_dls_tbl,$cw_
 	//	Set messaging variables
 	$cw_fs_no_fnd_msg_status='n';
 	$cw_fs_no_fnd_msg='This is quite embarrassing. We are unable to locate the requested information.';
-
+	
 	////////////////////////////////////////////////////////////////////////////
 	//	Download File
 	////////////////////////////////////////////////////////////////////////////
@@ -644,6 +647,7 @@ EOM;
 	////////////////////////////////////////////////////////////////////////////
 	//	Call out to browser
 	////////////////////////////////////////////////////////////////////////////
+$cw_share_files_page='';
 $cw_share_files_page .=<<<EOM
 <h4>$cw_share_files_title</h4>
 <div style="height: 10px; font-size: 10px;">&nbsp;</div>
