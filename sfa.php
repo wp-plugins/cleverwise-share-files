@@ -134,10 +134,12 @@ Global $wpdb,$current_user,$fs_wp_option,$cw_share_files_cats_tbl,$cw_share_file
 
 		//	Section list
 		$sseclist='<option value="">All Sections</option>';
-		foreach ($settings_sections as $settings_section) {
-			list($settings_section_id,$settings_section_name)=explode('|',$settings_section);
-			$settings_section_name_url=urlencode($settings_section_name);
-			$sseclist .='<option value="'.$settings_section_id.'">'.$settings_section_name.'</option>';
+		if ($settings_sections) {
+			foreach ($settings_sections as $settings_section) {
+				list($settings_section_id,$settings_section_name)=explode('|',$settings_section);
+				$settings_section_name_url=urlencode($settings_section_name);
+				$sseclist .='<option value="'.$settings_section_id.'">'.$settings_section_name.'</option>';
+			}
 		}
 
 		//	Category list
@@ -1260,6 +1262,10 @@ EOM;
 
 $cw_share_files_html .=<<<EOM
 <p>The following lists the new changes from version-to-version.</p>
+<p>Version: <b>1.9</b></p>
+<ul style="list-style: disc; margin-left: 25px;">
+<li>Fixed: An invalid warning notice</li>
+</ul>
 <p>Version: <b>1.8</b></p>
 <ul style="list-style: disc; margin-left: 25px;">
 <li>Background edits to eliminate some PHP notice messages</li>
