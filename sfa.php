@@ -1262,6 +1262,11 @@ EOM;
 
 $cw_share_files_html .=<<<EOM
 <p>The following lists the new changes from version-to-version.</p>
+<p>Version: <b>2.0</b></p>
+<ul style="list-style: disc; margin-left: 25px;">
+<li>Altered File Sections to allow for hyphens</li>
+<li>Altered Root URL to allow tilde using %7e standard</li>
+</ul>
 <p>Version: <b>1.9</b></p>
 <ul style="list-style: disc; margin-left: 25px;">
 <li>Fixed: An invalid warning notice</li>

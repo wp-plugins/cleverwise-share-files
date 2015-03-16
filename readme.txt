@@ -4,7 +4,7 @@ Donate link: http://www.cyberws.com/cleverwise-plugins/
 Tags: downloads, download, download management, download system, files, file, file management, file system
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: 1.9
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,10 @@ One method is to use Wordpress' built in media management system to upload the a
 
 == Changelog ==
 
+= 2.0 =
+Altered File Sections to allow for hyphens
+Altered Root URL to allow tilde using %7e standard
+
 = 1.9 =
 Fixed: An invalid warning notice
 
@@ -98,5 +102,5 @@ Initial release of plugin
 
 == Upgrade Notice ==
 
-= 1.9 =
-If there are no file sections in "Settings" an invalid error message was displayed.
+= 2.0 =
+Now supports hosting that uses tildes and allows for hyphens in File Sections
